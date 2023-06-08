@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito&display=swap")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+
+  body
+    nav.nav 
+      if currentUser
+        a.links(href='/').nav-heading MembersOnly 
+        div   
+          a.links(href='/post') 
+            h2 message
+            i.material-icons add
+          a.links(href='/log-out') 
+            h2 logout
+            i.material-icons logout
+      else 
+        a(href='/').nav-heading MembersOnly 
+        div   
+          a.links(href='/post') 
+            h2 message
+            i.material-icons add
+          a.links(href='/log-in') 
+            h2 login
+            i.material-icons login
+
+    block content

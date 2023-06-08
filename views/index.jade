@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  main
+    h1 Message Board
+
+    ul
+      each message in allMessages
+        if user
+          li.post-container
+            h2 #{message._doc.title}
+            p #{message._doc.message}
+            div 
+              h3 by #{message._doc.user.username}
+              p #{message.date}
+        else 
+          li.post-container
+            h2 #{message._doc.title}
+            p #{message._doc.message}
+            div 
+              h3 by Anon
+              p unknown
+            .note Note: Login to see who posted and when
+            

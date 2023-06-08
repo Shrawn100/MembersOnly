@@ -1,0 +1,26 @@
+extends layout 
+
+block content 
+    h1.create-post-header Sign Up
+        form.create-post-form(action="" method="POST")
+            
+            label.label(for="username") Username:
+            if errors 
+                input#username.error(value=(user?user.username:"") type="text" name="username" required=true placeholder="username")
+            else 
+                input#username(value=(user?user.username:"") type="text" name="username" required=true placeholder="username")
+            label.label(for="password") Password:
+            if !unmatch
+                input#password( type="password" name="password" required=true placeholder="password")
+                input#confirmPassword(type="password" name="confirm" required=true placeholder="confirm password")
+            else 
+                input#password.error( type="password" name="password" required=true placeholder="password")
+                input#confirmPassword.error(type="password" name="confirm" required=true placeholder="confirm password")
+            if errors
+                for error in errors 
+                    if(error.msg)
+                        p.error-msg #{error.msg}
+                    else 
+                        p.error-msg #{error}
+            button.post-btn Submit
+    
