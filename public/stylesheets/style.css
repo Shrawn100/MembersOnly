@@ -215,6 +215,7 @@ ul{
   text-align: center;
   margin-top:50px;
   font-size:25px;
+  font-family:"Nunito",sans-serif
 }
 
 
@@ -225,5 +226,9 @@ ul{
 .sign-in-redirect{
   text-align: center;
   font-family:"Nunito",sans-serif;
+  gap:2px;
+}
+.sign-in-redirect>a{
+  margin-left:4px;
 }
 
