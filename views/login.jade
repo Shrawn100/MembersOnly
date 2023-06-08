@@ -5,12 +5,18 @@ block content
 
   form.create-post-form.log-in(action="" method="POST")
     label.label(for="username") Username:
-    input#username(type="text" value=(username?username:"") name="username" required=true placeholder="username")
+    if errors&&!incorrect
+        input.error#username(type="text" value=(username?username:"") name="username" required=true placeholder="username")
+    else 
+        input#username(type="text" value=(username?username:"") name="username" required=true placeholder="username")
     label.label(for="password") Password:
     if incorrect
         input#password.error(type="password" value=(password?password:"") name="password" required=true placeholder="password")
     else
-         input#password(type="password" value=(password?password:"") name="password" required=true placeholder="password")
+        if errors
+            input.error#password(type="password" value=(password?password:"") name="password" required=true placeholder="password")
+        else  
+            input#password(type="password" value=(password?password:"") name="password" required=true placeholder="password")
     if errors 
         for error in errors 
             p.error-msg #{error.msg}
