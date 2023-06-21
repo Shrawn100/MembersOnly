@@ -6,16 +6,16 @@ block content
             
             label.label(for="username") Username:
             if errors 
-                input#username.error(value=(user?user.username:"") type="text" name="username" required=true placeholder="username")
+                input#username.error(value=(user?user.username:"") type="text" name="username" required=true placeholder="Username")
             else 
-                input#username(value=(user?user.username:"") type="text" name="username" required=true placeholder="username")
+                input#username(value=(user?user.username:"") type="text" name="username" required=true placeholder="Username")
             label.label(for="password") Password:
             if !unmatch
-                input#password( type="password" name="password" required=true placeholder="password")
-                input#confirmPassword(type="password" name="confirm" required=true placeholder="confirm password")
+                input#password( type="password" name="password" required=true placeholder="Password")
+                input#confirmPassword(type="password" name="confirm" required=true placeholder="Confirm password")
             else 
-                input#password.error( type="password" name="password" required=true placeholder="password")
-                input#confirmPassword.error(type="password" name="confirm" required=true placeholder="confirm password")
+                input#password.error( type="password" name="password" required=true placeholder="Password")
+                input#confirmPassword.error(type="password" name="confirm" required=true placeholder="Confirm password")
             if errors
                 for error in errors 
                     if(error.msg)
