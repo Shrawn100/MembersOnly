@@ -2,18 +2,22 @@
 body,*{
   margin:0;
   padding:0;
+ 
 }
+
 a {
   color: #00B7FF;
 }
 
+/* NavBar */
 .nav{
   display:flex;
-  justify-content: space-around;
-  background-color: black;
-  
+  justify-content: space-between;
+  background-color: rgb(239, 19, 19);
   color:white;
-  padding:25px;
+  
+  padding:14px 30px 14px 30px;
+  
   align-items: center;
   font-weight:bold;
   font-family: "Oswald",sans-serif;
@@ -21,13 +25,13 @@ a {
 }
 .nav-heading{
   font-family: "Oswald",sans-serif;
-  font-size:26px;
+  font-size:28px;
   font-weight:700;
   text-decoration: none;
   color:white;
 }
 .nav-heading:hover{
-  transform: scale(1.1);
+  transform: scale(0.98);
 }
 
 .nav>div{
@@ -60,7 +64,7 @@ a {
   font-weight:bold;
 }
 .links:hover>h2,.links:hover>i{
-  transform: scale(1.1);
+  transform: scale(0.98);
 }
 
 
@@ -71,21 +75,22 @@ main{
   display:flex;
   flex-direction: column;
   align-items: center;
- 
+  background-color: rgb(255, 255, 255);
 }
 main>h1{
   width:70%;
   padding: 0px 40px 0px 0px;
   font-family: "Oswald";
   margin-top:20px;
-  font-size:23px; 
- 
+  font-size:28px; 
+  color:rgb(200, 19, 19);
+  text-align: center;
   
 }
 ul{
   text-decoration: none;
   list-style: none;
- 
+  width:100%;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -93,53 +98,73 @@ ul{
   gap:20px;
   padding-left: 0;
   padding-bottom:40px;
-  
 }
 .post-container{
-  
+  border-radius:20px;
   padding:20px 20px 20px 30px;
   margin:0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
   width:70%;
   text-align: start;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+}
+.post-container:hover{
+  transform:scale(0.998)
 }
 .post-container>h2{
   font-family:"Oswald",sans-serif;
   font-weight:700;
   font-size: 22px;
   padding-bottom:20px;
+  color:rgb(200, 19, 19);
 }
 .post-container>p{
-  font-size:15px;
+  font-size:17px;
   font-family: "Nunito",sans-serif;
+  word-wrap: break-word;
 }
 .post-container>div{
   padding-top:20px;
   display:flex;
   justify-content: space-between;
+
 }
 .post-container>div>h3{
   font-family:"Nunito",sans-serif;
-  font-weight:500;
-  
-  font-size:12px;
+  font-weight:600;
+  font-size:14px;
 }
 .post-container>div>p{
   font-family: "Nunito",sans-serif;
-  font-size:12px;
+  font-size:14px;
+  
+  font-weight:600;
 }
 .note{
-  font-size:10px;
-  font-family:"Nunito",sans-serif
+  font-size:12px;
+  font-family:"Nunito",sans-serif;
+ 
 }
 
 /* Post Page */
-
+.please{
+  text-align: center;
+  font-family: "Oswald",sans-serif;
+  margin-top:100px;
+  color:rgb(200, 19, 19);
+}
+.redirect-login{
+  text-align: center;
+  margin-top:50px;
+  font-size:25px;
+  font-family:"Nunito",sans-serif;
+  
+}
 .create-post-header{
   font-family:"Oswald";
   font-size:24px;
   text-align: center;
   padding-top:30px;
+  color:rgb(200, 19, 19);
 }
 .create-post-form{
   display:flex;
@@ -160,12 +185,13 @@ ul{
   padding-bottom: 5px;
   font-family: "Oswald",sans-serif;
   font-size:18px;
-  font-weight:bold
+  font-weight:bold;
+  color:rgb(200, 19, 19);
 }
 .post-btn{
   padding:10px;
   width:200px;
-  background-color: rgb(32, 140, 186);
+  background-color:rgb(239, 19, 19);
   color:white;
   font-weight: bold;
   font-size:20px;
@@ -175,7 +201,7 @@ ul{
 }
 .post-btn:hover{
   cursor: pointer;
-  background-color: rgb(22, 114, 154);
+  background-color: rgb(200, 19, 19);
 }
 
 /* sign up form */
@@ -205,18 +231,7 @@ ul{
   
 
 }
-.please{
-  text-align: center;
-  font-family: "Oswald",sans-serif;
-  margin-top:100px;
-  
-}
-.redirect-login{
-  text-align: center;
-  margin-top:50px;
-  font-size:25px;
-  font-family:"Nunito",sans-serif
-}
+
 
 
 /* log in form */

@@ -4,7 +4,7 @@ block content
   h1.create-post-header Login
   form.create-post-form.log-in(action="" method="POST")
     label.label(for="username") Username:
-    if errors&&!incorrect
+    if errors
         input.error#username(type="text" value=(username?username:"") name="username" required=true placeholder="username")
     else 
         input#username(type="text" value=(username?username:"") name="username" required=true placeholder="username")
@@ -12,10 +12,7 @@ block content
     if incorrect
         input#password.error(type="password" value=(password?password:"") name="password" required=true placeholder="password")
     else
-        if errors
-            input.error#password(type="password" value=(password?password:"") name="password" required=true placeholder="password")
-        else  
-            input#password(type="password" value=(password?password:"") name="password" required=true placeholder="password")
+        input#password(type="password" value=(password?password:"") name="password" required=true placeholder="password")
     if errors 
         for error in errors 
             p.error-msg #{error.msg}
