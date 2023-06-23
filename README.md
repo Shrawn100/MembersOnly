@@ -1,4 +1,4 @@
-# membersOnly
+# MembersOnly
 
 A messageboard application built with Express.js, MongoDB, and Pug for views. It includes user authentication and authorization using Passport, with password encryption for enhanced security.
 
