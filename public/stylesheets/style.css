@@ -12,11 +12,11 @@ a {
 /* NavBar */
 .nav{
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: rgb(40, 39, 39);
   color:white;
   
-  padding:14px 30px 14px 30px;
+  padding:18px 30px 18px 30px;
   
   align-items: center;
   font-weight:bold;
